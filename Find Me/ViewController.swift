@@ -45,6 +45,44 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         altitude.text = String(userLocation.altitude)
         speed.text = String(userLocation.speed) + " mph"
         course.text = String(userLocation.course)
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation) {
+            (placemarks, errors) in
+            if errors != nil {
+                print(errors)
+            }
+            else {
+                if let placemark = placemarks?[0] {
+                    var addr = ""
+                    if placemark.subThoroughfare != nil {
+                        addr += placemark.subThoroughfare! + ", "
+                    }
+                    if placemark.thoroughfare != nil {
+                        addr += placemark.thoroughfare! + ", "
+                    }
+                    if placemark.subLocality != nil {
+                        addr += placemark.subLocality! + ", "
+                    }
+                    if placemark.locality != nil {
+                        addr += placemark.locality! + ", "
+                    }
+                    if placemark.subAdministrativeArea != nil {
+                        addr += placemark.subAdministrativeArea! + ", "
+                    }
+                    if placemark.administrativeArea != nil {
+                        addr += placemark.administrativeArea! + ", "
+                    }
+                    if placemark.postalCode != nil {
+                        addr += placemark.postalCode! + ", "
+                    }
+                    if placemark.isoCountryCode != nil {
+                        addr += placemark.isoCountryCode! + "."
+                    }
+                    print(addr)
+                    self.address.text = addr
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
