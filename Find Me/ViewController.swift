@@ -7,9 +7,21 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+import MapKit
+import CoreLocation
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var latitude: UILabel!
+    @IBOutlet weak var longitude: UILabel!
+    @IBOutlet weak var altitude: UILabel!
+    @IBOutlet weak var speed: UILabel!
+    @IBOutlet weak var course: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var map: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
