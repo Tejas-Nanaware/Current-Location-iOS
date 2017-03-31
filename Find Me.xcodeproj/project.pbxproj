@@ -14,6 +14,7 @@
 		84495D3B1E8E1671006ADC6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84495D391E8E1671006ADC6F /* LaunchScreen.storyboard */; };
 		84495D461E8E1671006ADC6F /* Find_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84495D451E8E1671006ADC6F /* Find_MeTests.swift */; };
 		84495D511E8E1671006ADC6F /* Find_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84495D501E8E1671006ADC6F /* Find_MeUITests.swift */; };
+		84495D601E8E1852006ADC6F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84495D5F1E8E1852006ADC6F /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		84495D4C1E8E1671006ADC6F /* Find MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84495D501E8E1671006ADC6F /* Find_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_MeUITests.swift; sourceTree = "<group>"; };
 		84495D521E8E1671006ADC6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84495D5F1E8E1852006ADC6F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84495D601E8E1852006ADC6F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				84495D441E8E1671006ADC6F /* Find MeTests */,
 				84495D4F1E8E1671006ADC6F /* Find MeUITests */,
 				84495D2E1E8E1671006ADC6F /* Products */,
+				84495D5E1E8E1852006ADC6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				84495D521E8E1671006ADC6F /* Info.plist */,
 			);
 			path = "Find MeUITests";
+			sourceTree = "<group>";
+		};
+		84495D5E1E8E1852006ADC6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84495D5F1E8E1852006ADC6F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
